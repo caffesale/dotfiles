@@ -1,5 +1,6 @@
 local opt = vim.opt -- for conciseness
 
+vim.g.dashboard_default_executive = "telescope"
 vim.notify = require("notify")
 
 -- gui corsor

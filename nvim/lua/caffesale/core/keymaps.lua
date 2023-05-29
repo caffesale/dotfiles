@@ -6,6 +6,21 @@ local keymap = vim.keymap
 
 keymap.set("n", "x", '"_x')
 
+-- tabs
+keymap.set("n", "<leader>tc", ":tabnew <CR>")
+keymap.set("n", "<leader>tx", ":tabclose <CR>")
+keymap.set("n", "]t", "gt")
+keymap.set("n", "[t", "gT")
+
+-- windows
+keymap.set("n", "<leader>ws", ":vs <CR>")
+
+-- buffers
+keymap.set("n", "<Tab>", ":bn <CR>")
+keymap.set("n", "<S-Tab>", ":bp <CR>")
+keymap.set("n", "<leader>x", ":Bdelete <CR>")
+keymap.set("n", "<leader>bm", ":MaximizerToggle<CR>")
+
 -- line insert
 
 keymap.set("n", "<leader>o", "o<ESC>")
@@ -26,20 +41,17 @@ keymap.set("n", "N", "Nzzzv")
 keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-keymap.set({"n", "v"}, "<leader>y", [["+y]])
+keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 keymap.set("n", "<leader>Y", [["+Y]])
-keymap.set({"n", "v"}, "<leader>bd", [["_d]])
+-- keymap.set({"n", "v"}, "<leader>bd", [["_d]])
 
-keymap.set("n", "Q", "<nop>")
-keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- keymap.set("n", "Q", "<nop>")
+-- keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+keymap.set("n", "<leader>cx", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- plugin keymaps
-
--- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
@@ -48,6 +60,8 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
+keymap.set("n", "<leader>fq", "<cmd>TodoQuickFix <cr>")
+keymap.set("n", "<leader>ft", "<cmd>TodoTelescope keywords=TODO,FIX<cr>")
+keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")

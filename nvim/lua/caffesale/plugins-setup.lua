@@ -27,7 +27,6 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	-- lua functions that many plugins use
 	use("nvim-lua/plenary.nvim")
-
 	-- color & theme
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "ellisonleao/gruvbox.nvim" })
@@ -38,7 +37,7 @@ return packer.startup(function(use)
 	use("sainnhe/everforest")
 	use("sainnhe/sonokai")
 
-	-- tmux & split window navi
+	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
 	use("szw/vim-maximizer")
 
@@ -62,6 +61,13 @@ return packer.startup(function(use)
 
 	-- utils
 	use("mbbill/undotree")
+	use("lukas-reineke/indent-blankline.nvim")
+	use("simrat39/symbols-outline.nvim")
+	use("folke/todo-comments.nvim")
+
+	-- status bar
+	use("akinsho/bufferline.nvim")
+	use("moll/vim-bbye")
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp")
@@ -95,6 +101,14 @@ return packer.startup(function(use)
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 	})
+
+	-- debug
+
+	-- use("mfussenegger/nvim-dap")
+	-- use("rcarriga/nvim-dap-ui")
+	-- use("theHamsta/nvim-dap-virtual-text")
+	-- use("nvim-telescope/telescope-dap.nvim")
+
 	-- auto closing
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
@@ -104,6 +118,20 @@ return packer.startup(function(use)
 
 	-- notify
 	use("rcarriga/nvim-notify")
+
+	-- dashboard
+	use({
+		"glepnir/dashboard-nvim",
+		event = "VimEnter",
+		config = function()
+			require("dashboard").setup({
+				config = {
+					header = require("caffesale.dashboard_art"),
+					disable_move = true,
+				},
+			})
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
