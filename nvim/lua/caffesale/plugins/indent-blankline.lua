@@ -7,7 +7,7 @@ require("indent_blankline").setup({
 	show_current_context = true,
 	show_current_context_start = true,
 	buftype_exclude = { "terminal" },
-	filetype_exclude = { "dashboard", "nvim-tree", "packer" },
+	filetype_exclude = { "dashboard", "nvim-tree", "packer", "mason" },
 	context_patterns = {
 		"class",
 		"return",

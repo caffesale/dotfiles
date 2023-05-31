@@ -105,9 +105,10 @@ return packer.startup(function(use)
 
 	-- debug
 	use("mfussenegger/nvim-dap")
-	-- use("rcarriga/nvim-dap-ui")
-	-- use("theHamsta/nvim-dap-virtual-text")
-	-- use("nvim-telescope/telescope-dap.nvim")
+	use("rcarriga/nvim-dap-ui")
+	use("nvim-telescope/telescope-dap.nvim")
+	-- use("jay-babu/mason-nvim-dap.nvim")
+	-- use("Idelossa/nvim-dap-projects")
 
 	-- auto closing
 	use("windwp/nvim-autopairs")
