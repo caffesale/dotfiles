@@ -212,6 +212,7 @@ dap.configurations.typescriptreact = {
 		protocol = "inspector",
 		port = 9222,
 		webRoot = "${workspaceFolder}",
+		-- url = "https://localhost:3000/",
 	},
 	{
 		name = "React Native (8081) (Node2)",
