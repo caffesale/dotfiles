@@ -59,6 +59,9 @@ keymap.set("n", "<leader>ls", "<cmd>SymbolsOutline<CR>")
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
+-- zenmode
+keymap.set("n", "<leader>z", "<cmd>lua require('zen-mode').toggle() <CR>")
+
 -- telescope
 
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")

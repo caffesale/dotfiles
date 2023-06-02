@@ -65,6 +65,7 @@ return packer.startup(function(use)
 	use("simrat39/symbols-outline.nvim")
 	use("folke/todo-comments.nvim")
 	use("akinsho/toggleterm.nvim")
+	use("folke/zen-mode.nvim")
 
 	-- status bar
 	use("akinsho/bufferline.nvim")
@@ -102,6 +103,7 @@ return packer.startup(function(use)
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 	})
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	-- debug
 	use("mfussenegger/nvim-dap")
@@ -129,6 +131,7 @@ return packer.startup(function(use)
 		event = "VimEnter",
 		config = function()
 			require("dashboard").setup({
+				-- theme = "doom",
 				config = {
 					header = require("caffesale.dashboard_art"),
 					disable_move = true,
