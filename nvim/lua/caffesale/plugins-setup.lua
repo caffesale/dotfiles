@@ -142,27 +142,28 @@ return packer.startup(function(use)
 	})
 
 	-- copilot
-	-- use {
-	--   "zbirenbaum/copilot.lua",
-	--   cmd = "Copilot",
-	--   event = "InsertEnter",
-	--   config = function()
-	--     require("copilot").setup({
-	--         panel = {
-	--           enabled = false,
-	--           keymap = {},
-	--         }
-	--         suggestion = {
-	--           enabled = true,
-	--           auto_trigger = true,
-	--         }
-	--         filetypes = {
-	--         javascript = true,
-	--         typescript = true,
-	--         }
-	--       })
-	--   end,
-	-- }
+	-- use({
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	cmd = "Copilot",
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("copilot").setup({
+	-- 			panel = {
+	-- 				enabled = false,
+	-- 				keymap = {},
+	-- 			},
+	-- 			suggestion = {
+	-- 				enabled = true,
+	-- 				auto_trigger = true,
+	-- 				keymap = {},
+	-- 			},
+	-- 			filetypes = {
+	-- 				javascript = true,
+	-- 				typescript = true,
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- })
 	-- use {
 	--  "zbirenbaum/copilot-cmp",
 	--  after = {"copilot.lua"},
