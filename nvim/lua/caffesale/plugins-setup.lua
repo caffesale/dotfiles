@@ -44,6 +44,7 @@ return packer.startup(function(use)
 	-- essential plugins
 	use("tpope/vim-surround")
 	use("numToStr/Comment.nvim")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
@@ -139,6 +140,36 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+
+	-- copilot
+	-- use {
+	--   "zbirenbaum/copilot.lua",
+	--   cmd = "Copilot",
+	--   event = "InsertEnter",
+	--   config = function()
+	--     require("copilot").setup({
+	--         panel = {
+	--           enabled = false,
+	--           keymap = {},
+	--         }
+	--         suggestion = {
+	--           enabled = true,
+	--           auto_trigger = true,
+	--         }
+	--         filetypes = {
+	--         javascript = true,
+	--         typescript = true,
+	--         }
+	--       })
+	--   end,
+	-- }
+	-- use {
+	--  "zbirenbaum/copilot-cmp",
+	--  after = {"copilot.lua"},
+	--  config = function()
+	--    require("copilot-cmp").setup()
+	--    end,
+	-- }
 
 	if packer_bootstrap then
 		require("packer").sync()
