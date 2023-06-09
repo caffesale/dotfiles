@@ -120,9 +120,6 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 
-	-- git signs plugin
-	use("lewis6991/gitsigns.nvim")
-
 	-- notify
 	use("rcarriga/nvim-notify")
 
@@ -142,35 +139,25 @@ return packer.startup(function(use)
 	})
 
 	-- copilot
-	-- use({
-	-- 	"zbirenbaum/copilot.lua",
-	-- 	cmd = "Copilot",
-	-- 	event = "InsertEnter",
-	-- 	config = function()
-	-- 		require("copilot").setup({
-	-- 			panel = {
-	-- 				enabled = false,
-	-- 				keymap = {},
-	-- 			},
-	-- 			suggestion = {
-	-- 				enabled = true,
-	-- 				auto_trigger = true,
-	-- 				keymap = {},
-	-- 			},
-	-- 			filetypes = {
-	-- 				javascript = true,
-	-- 				typescript = true,
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- })
-	-- use {
-	--  "zbirenbaum/copilot-cmp",
-	--  after = {"copilot.lua"},
-	--  config = function()
-	--    require("copilot-cmp").setup()
-	--    end,
-	-- }
+	use({
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({
+				panel = { enabled = false },
+				suggestion = { enabled = false },
+			})
+		end,
+	})
+
+	use({
+		"zbirenbaum/copilot-cmp",
+		after = { "copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
