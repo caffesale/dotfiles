@@ -70,6 +70,7 @@ return packer.startup(function(use)
 
 	-- status bar
 	use("akinsho/bufferline.nvim")
+	use("tiagovla/scope.nvim")
 	use("moll/vim-bbye")
 
 	-- autocompletion

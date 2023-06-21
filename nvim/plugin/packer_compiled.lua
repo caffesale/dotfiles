@@ -302,6 +302,11 @@ _G.packer_plugins = {
     path = "/Users/aegteubeiseu/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["scope.nvim"] = {
+    loaded = true,
+    path = "/Users/aegteubeiseu/.local/share/nvim/site/pack/packer/start/scope.nvim",
+    url = "https://github.com/tiagovla/scope.nvim"
+  },
   sonokai = {
     loaded = true,
     path = "/Users/aegteubeiseu/.local/share/nvim/site/pack/packer/start/sonokai",
