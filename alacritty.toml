@@ -7,10 +7,9 @@ blur = true
 
 [font]
 normal = { family = "JetBrainsMonoNLNerdFont", style = "Regular" }
-#normal = { family = "Fira Code", style = "Regular" }
+#normal = { family = "Fira Code", style = "Regular" }https://github.com/caffesale/config/edit/main/alacritty.toml
 #normal = { family = "source Code Pro", style = "Regular" }
 bold = { style = "Bold" }
-italic = { style = "Bold" }
 size = 14
 
 [env]
