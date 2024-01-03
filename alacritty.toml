@@ -1,0 +1,17 @@
+[window]
+padding = { x = 5, y = 5 }
+decorations = "Full"
+# Transparent
+opacity = 0.75
+blur = true
+
+[font]
+normal = { family = "JetBrainsMonoNLNerdFont", style = "Regular" }
+#normal = { family = "Fira Code", style = "Regular" }
+#normal = { family = "source Code Pro", style = "Regular" }
+bold = { style = "Bold" }
+italic = { style = "Bold" }
+size = 14
+
+[env]
+#TERM = "xterm-256color"
